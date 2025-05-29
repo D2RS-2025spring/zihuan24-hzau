@@ -23,12 +23,9 @@ website:
       - href: contact.qmd
         text: 联系我们
   page-footer:
-    left: "© 2025 土壤化学与环境课题组 | 资源与环境学院 | 华中农业大学"
+    left: "© 2025 土壤化学与环境课题组 | [资源与环境学院](https://zyhj.hzau.edu.cn/) | [华中农业大学](https://www.hzau.edu.cn)"
     center: "[学院官网](https://zyhj.hzau.edu.cn/) | [学校官网](https://www.hzau.edu.cn)"
     right: "最后更新日期: 2025-05-29"
-  sidebar:
-    style: floating
-    background: "white"  # 侧边栏背景设为白色
 
 format:
   html:

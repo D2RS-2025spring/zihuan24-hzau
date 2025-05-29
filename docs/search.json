@@ -4,7 +4,7 @@
     "href": "members.html",
     "title": "团队成员",
     "section": "",
-    "text": "姓名\n职称\n研究方向\n邮箱\n\n\n\n\n张明远\n教授\n土壤污染修复\nzhangmy@hzau.edu.cn\n\n\n李华\n副教授\n废弃物资源化\nlihua@hzau.edu.cn"
+    "text": "&lt;h5 class=\"card-title\"&gt;王教授&lt;/h5&gt;\n&lt;h6 class=\"card-subtitle mb-2 text-muted\"&gt;教授/博士生导师&lt;/h6&gt;\n&lt;p class=\"card-text\"&gt;&lt;strong&gt;研究方向：&lt;/strong&gt;农业机器人、计算机视觉、智能农业系统&lt;/p&gt;\n&lt;a href=\"mailto:wang@hzau.edu.cn\" class=\"btn btn-outline-primary\"&gt;联系&lt;/a&gt;"
   },
   {
     "objectID": "members.html#导师团队",
@@ -68,5 +68,47 @@
     "title": "研究成果",
     "section": "",
     "text": "#| echo: false # 自动生成论文列表 papers &lt;- data.frame( Year = c(2025, 2024, 2024, 2023), Authors = c(“Zhang M, Wang Q, et al.”, “Liu F, Zhang M, et al.”, “Chen M, Li H”, “Yang F, Zhang M”), Title = c( “新型生物炭复合材料对镉污染土壤的修复机制”, “江汉平原农业生态系统服务功能评估”, “秸秆基生物炭的制备及其对磷的吸附性能”, “农田排水沟渠对氮磷拦截效率研究” ), Journal = c( “环境科学, 46(5): 1234-1245”, “生态学报, 44(3): 567-578”, “农业环境科学学报, 43(2): 345-356”, “环境科学学报, 42(8): 2345-2356” ), DOI = c(“10.13227/j.hjkx.202410123”, “10.5846/stxb202310123456”, “10.11654/jaes.2023.1234”, “10.13671/j.hjkxxb.2023.0456”) )\ncat(“## 发表论文”) for(i in 1:nrow(papers)){ cat(paste0( “- **“, papers\\(Title[i], \"**  \\n\",\n    \"  \", papers\\)Authors[i],” “,” *“, papers\\(Journal[i], \"* (\", papers\\)Year[i],”) “,” [DOI:“, papers\\(DOI[i], \"](https://doi.org/\", papers\\)DOI[i],”)” )) }"
+  },
+  {
+    "objectID": "members.html#导师",
+    "href": "members.html#导师",
+    "title": "团队成员",
+    "section": "",
+    "text": "&lt;h5 class=\"card-title\"&gt;王教授&lt;/h5&gt;\n&lt;h6 class=\"card-subtitle mb-2 text-muted\"&gt;教授/博士生导师&lt;/h6&gt;\n&lt;p class=\"card-text\"&gt;&lt;strong&gt;研究方向：&lt;/strong&gt;农业机器人、计算机视觉、智能农业系统&lt;/p&gt;\n&lt;a href=\"mailto:wang@hzau.edu.cn\" class=\"btn btn-outline-primary\"&gt;联系&lt;/a&gt;"
+  },
+  {
+    "objectID": "members.html#博士生团队",
+    "href": "members.html#博士生团队",
+    "title": "团队成员",
+    "section": "博士生团队",
+    "text": "博士生团队\n\n\n\n\n\n&lt;h5 class=\"card-title\"&gt;张三&lt;/h5&gt;\n&lt;h6 class=\"card-subtitle mb-2 text-muted\"&gt;博士研究生 (2023级)&lt;/h6&gt;\n&lt;p class=\"card-text\"&gt;&lt;strong&gt;研究方向：&lt;/strong&gt;基于深度学习的作物病害识别&lt;/p&gt;\n&lt;a href=\"mailto:zhangsan@hzau.edu.cn\" class=\"btn btn-outline-primary\"&gt;联系&lt;/a&gt;\n\n\n\n\n\n\n\n&lt;h5 class=\"card-title\"&gt;李四&lt;/h5&gt;\n&lt;h6 class=\"card-subtitle mb-2 text-muted\"&gt;博士研究生 (2022级)&lt;/h6&gt;\n&lt;p class=\"card-text\"&gt;&lt;strong&gt;研究方向：&lt;/strong&gt;农业机器人路径规划与控制&lt;/p&gt;\n&lt;a href=\"mailto:lisi@hzau.edu.cn\" class=\"btn btn-outline-primary\"&gt;联系&lt;/a&gt;"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "联系我们",
+    "section": "",
+    "text": "地址：湖北省武汉市洪山区狮子山街1号华中农业大学资源与环境学院\n邮编：430070\n电话：027-8728XXXX\n邮箱：group@hzau.edu.cn"
+  },
+  {
+    "objectID": "contact.html#联系方式",
+    "href": "contact.html#联系方式",
+    "title": "联系我们",
+    "section": "",
+    "text": "地址：湖北省武汉市洪山区狮子山街1号华中农业大学资源与环境学院\n邮编：430070\n电话：027-8728XXXX\n邮箱：group@hzau.edu.cn"
+  },
+  {
+    "objectID": "contact.html#来访路线",
+    "href": "contact.html#来访路线",
+    "title": "联系我们",
+    "section": "来访路线",
+    "text": "来访路线"
+  },
+  {
+    "objectID": "contact.html#联系表单",
+    "href": "contact.html#联系表单",
+    "title": "联系我们",
+    "section": "联系表单",
+    "text": "联系表单\n\n\n&lt;label&gt;姓名&lt;/label&gt;\n&lt;input type=\"text\" name=\"name\" required&gt;\n\n\n&lt;label&gt;邮箱&lt;/label&gt;\n&lt;input type=\"email\" name=\"email\" required&gt;\n\n\n&lt;label&gt;主题&lt;/label&gt;\n&lt;select name=\"subject\"&gt;\n  &lt;option&gt;合作咨询&lt;/option&gt;\n  &lt;option&gt;招生询问&lt;/option&gt;\n  &lt;option&gt;学术交流&lt;/option&gt;\n  &lt;option&gt;其他&lt;/option&gt;\n&lt;/select&gt;\n\n\n&lt;label&gt;留言&lt;/label&gt;\n&lt;textarea name=\"message\" rows=\"5\" required&gt;&lt;/textarea&gt;\n\n\n发送"
   }
 ]
