@@ -32,13 +32,21 @@ website:
 
 format:
   html:
+    execute:
+      enabled: false  # 禁用所有代码执行
     css: styles.css
-    toc: false
-    code-fold: true
     theme: 
       light: cosmo   # 使用浅色主题
       dark: none     # 禁用深色模式
     background: white  # 设置整个页面背景为白色
     linkcolor: "#0066cc"  # 链接颜色
+    fontfamily: 
+      - "Segoe UI"
+      - Roboto
+      - "Helvetica Neue"
+      - Arial
+      - sans-serif
+    fontsize: 1.1rem
+    line-height: 1.6
 
 
