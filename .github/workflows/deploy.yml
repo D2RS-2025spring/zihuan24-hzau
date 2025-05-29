@@ -15,10 +15,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          version: latest
+      # 使用正确的Quarto安装方法
+      - name: Install Quarto
+        run: |
+          # 获取最新版本号
+          QUARTO_VERSION=$(curl -s "https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+          # 下载并安装
+          wget https://github.com/quarto-dev/quarto-cli/releases/download/${QUARTO_VERSION}/quarto-${QUARTO_VERSION:1}-linux-amd64.deb
+          sudo dpkg -i quarto-*.deb
+          rm quarto-*.deb
+          quarto check
 
       - name: Render site
         run: quarto render
