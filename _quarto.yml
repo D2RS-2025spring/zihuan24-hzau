@@ -1,7 +1,9 @@
 project:
   type: website
   output-dir: docs  # GitHub Pages 要求
-
+  include:
+    - ".nojekyll"  # 添加这一行
+    
 website:
   title: "土壤化学与环境课题组"
   navbar:
