@@ -1,0 +1,18 @@
+---
+title: "首页"
+---
+
+![课题组横幅](assets/images/banner.jpg){.banner}
+
+<div class="jumbotron">
+# 土壤化学与环境课题组
+> 致力于水土界面过程与土壤健康方面研究
+
+<div class="highlights">
+  ![](assets/images/icon-paper.svg){.icon} **最新成果**: *需要修改！农田重金属修复技术发表于《环境科学》  
+  ![](assets/images/icon-award.svg){.icon} **团队荣誉**: *需要修改！获2025年湖北省科技进步奖  
+  ![](assets/images/icon-event.svg){.icon} **学术活动**: *需要修改！成功举办农业生态国际研讨会  
+</div>
+
+[了解课题组 →](#about)
+</div>

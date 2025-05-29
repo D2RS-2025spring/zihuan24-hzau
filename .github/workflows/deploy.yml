@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install Quarto
+        run: |
+          wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.515/quarto-1.4.515-linux-amd64.deb
+          sudo dpkg -i quarto-*.deb
+          rm quarto-*.deb
+          quarto --version
+
+      - name: Render site
+        run: |
+          quarto render
+          # 确保添加 .nojekyll 文件到输出目录
+          touch docs/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages
+          force_orphan: true
+          keep_files: false
