@@ -3,8 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   build-deploy:
@@ -12,26 +10,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
-      # 使用正确的Quarto安装方法
       - name: Install Quarto
         run: |
-          # 获取最新版本号
-          QUARTO_VERSION=$(curl -s "https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-          # 下载并安装
-          wget https://github.com/quarto-dev/quarto-cli/releases/download/${QUARTO_VERSION}/quarto-${QUARTO_VERSION:1}-linux-amd64.deb
-          sudo dpkg -i quarto-*.deb
-          rm quarto-*.deb
-          quarto check
+          sudo apt-get update
+          sudo apt-get install -y curl
+          curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb
+          sudo dpkg -i quarto-linux-amd64.deb
+          rm quarto-linux-amd64.deb
+          quarto --version
 
       - name: Render site
-        run: quarto render
+        run: |
+          quarto render
+          # 添加必要的文件
+          touch docs/.nojekyll
+          echo "Your custom domain" > docs/CNAME
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-          force_orphan: true
+      # 不需要单独的部署步骤，GitHub 会自动部署 docs 文件夹
