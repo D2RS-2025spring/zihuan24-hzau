@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: docs  # GitHub Pages 要求
+
+website:
+  title: "土壤化学与环境课题组"
+  navbar:
+    background: light
+    left:
+      - href: index.qmd
+        text: 首页
+      - href: about.qmd
+        text: 关于我们
+      - href: research.qmd
+        text: 研究方向
+      - href: members.qmd
+        text: 团队成员
+      - href: publications.qmd
+        text: 研究成果
+      - href: contact.qmd
+        text: 联系我们
+  page-footer:
+    left: "© 2025 土壤化学与环境课题组 | 资源与环境学院 | 华中农业大学"
+    center: "[学院官网](https://zyhj.hzau.edu.cn/) | [学校官网](https://www.hzau.edu.cn)"
+    right: "最后更新日期: 2025-05-29"
+  sidebar:
+    style: floating
+    background: "white"  # 侧边栏背景设为白色
+
+format:
+  html:
+    css: styles.css
+    toc: false
+    code-fold: true
+    theme: 
+      light: cosmo   # 使用浅色主题
+      dark: none     # 禁用深色模式
+    background: white  # 设置整个页面背景为白色
+    linkcolor: "#0066cc"  # 链接颜色
+
+
