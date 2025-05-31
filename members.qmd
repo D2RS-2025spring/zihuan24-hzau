@@ -1,47 +1,628 @@
----
-title: 团队成员
----
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华中农业大学资源与环境学院 - 教师团队</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#3b82f6',
+                        accent: '#0ea5e9',
+                        neutral: '#f1f5f9',
+                        dark: '#0f172a'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+            }
+            .section-padding {
+                @apply py-8 md:py-12;
+            }
+            .section-title {
+                @apply text-2xl md:text-3xl font-bold text-primary mb-6 relative after:absolute after:bottom-0 after:left-0 after:h-1 after:w-16 after:bg-accent;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-primary">
+                <i class="fa fa-university mr-2"></i>华中农业大学资源与环境学院
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-700 hover:text-primary transition-colors">首页</a>
+                <a href="#faculty" class="text-gray-700 hover:text-primary transition-colors">教师团队</a>
+                <a href="#research" class="text-gray-700 hover:text-primary transition-colors">研究方向</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">联系我们</a>
+            </div>
+            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="md:hidden hidden bg-white shadow-lg absolute w-full" id="mobile-menu">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#home" class="text-gray-700 hover:text-primary py-2 transition-colors">首页</a>
+                <a href="#faculty" class="text-gray-700 hover:text-primary py-2 transition-colors">教师团队</a>
+                <a href="#research" class="text-gray-700 hover:text-primary py-2 transition-colors">研究方向</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary py-2 transition-colors">联系我们</a>
+            </div>
+        </div>
+    </nav>
 
-## 导师
+    <!-- 英雄区域 -->
+    <header id="home" class="bg-gradient-to-r from-primary to-secondary text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold mb-4 text-shadow">教师团队</h1>
+                <p class="text-xl md:text-2xl mb-6 opacity-90 max-w-lg">
+                    华中农业大学资源与环境学院致力于土壤科学、环境工程与生态修复等领域的研究与教学
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#faculty" class="bg-white text-primary px-6 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+                        <i class="fa fa-users mr-2"></i>查看团队
+                    </a>
+                    <a href="#contact" class="bg-accent text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+                        <i class="fa fa-envelope mr-2"></i>联系我们
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+                <img src="https://picsum.photos/seed/faculty/600/400" alt="学院教师团队合影" class="rounded-lg shadow-2xl max-w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500">
+            </div>
+        </div>
+    </header>
 
-<div class="row">
-<div class="col-md-6">
-<div class="card mb-4">
-  <img src="images/wang.jpg" class="card-img-top" alt="王教授">
-  <div class="card-body">
-    <h5 class="card-title">王教授</h5>
-    <h6 class="card-subtitle mb-2 text-muted">教授/博士生导师</h6>
-    <p class="card-text"><strong>研究方向：</strong>农业机器人、计算机视觉、智能农业系统</p>
-    <a href="mailto:wang@hzau.edu.cn" class="btn btn-outline-primary">联系</a>
-  </div>
-</div>
-</div>
-</div>
+    <!-- 主要内容 -->
+    <main class="container mx-auto px-4 section-padding">
+        <!-- 教师团队 -->
+        <section id="faculty" class="mb-16">
+            <h2 class="section-title pb-2 mb-8">教师团队</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- 侯静涛老师 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover opacity-0 translate-y-8 transition-all duration-700" data-aos="fade-up">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="https://picsum.photos/seed/houjingtao/400/500" alt="侯静涛老师照片" class="w-full h-full object-cover">
+                        </div>
+                        <div class="md:w-2/3 p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-primary">侯静涛</h3>
+                                    <p class="text-gray-600">副研究员 / 博士生导师</p>
+                                </div>
+                                <span class="bg-blue-100 text-primary text-sm font-medium px-3 py-1 rounded-full">中共党员</span>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="font-semibold text-gray-700 mb-2">电子邮箱</h4>
+                                <a href="mailto:jthou@mail.hzau.edu.cn" class="text-primary hover:underline">jthou@mail.hzau.edu.cn</a>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="font-semibold text-gray-700 mb-2">研究方向</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li>土壤污染过程与绿色修复</li>
+                                    <li>土壤障碍消减与土壤健康</li>
+                                    <li>退化土壤改良产品研发与应用</li>
+                                </ul>
+                            </div>
+                            
+                            <button class="w-full bg-blue-50 text-primary py-2 rounded-lg hover:bg-blue-100 transition-colors mt-2" onclick="toggleDetails('hou-details')">
+                                查看详情 <i class="fa fa-chevron-down ml-1"></i>
+                            </button>
+                            
+                            <div id="hou-details" class="hidden mt-4 pt-4 border-t border-gray-100">
+                                <p class="text-gray-700 mb-4">
+                                    侯静涛，华中农业大学资源与环境学院副研究员，博士生导师。2014年毕业于武汉理工大学，获工学博士学位。近年来，围绕国际科学前沿和国家重大需求，针对退化土壤（污染和酸化）中的关键科学问题，研究土-水-根-作物连续体中，元素（污染和养分）迁移界面过程与调控原理，从机理研究-产品研发-技术集成三个维度，开展健康土壤培育的理论与技术创新。
+                                </p>
+                                <p class="text-gray-700">
+                                    先后主持和参与包括国家自然科学基金、国家重点研发计划项目和湖北省自然科学基金等国家及省部级课题10余项，在Environmental Science & Technology和Geochimica et Cosmochimica Acta等环境地球科学高水平期刊发表论文40余篇，兼任湖北省土壤肥料学会副秘书长和国家农产品产地重金属污染综合防控协同创新联盟理事，是湖北省优秀博士论文获得者（2015年）。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 黄传琴老师 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover opacity-0 translate-y-8 transition-all duration-700" data-aos="fade-up" data-aos-delay="100">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="https://picsum.photos/seed/huangchuanqin/400/500" alt="黄传琴老师照片" class="w-full h-full object-cover">
+                        </div>
+                        <div class="md:w-2/3 p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-primary">黄传琴</h3>
+                                    <p class="text-gray-600">副教授</p>
+                                </div>
+                                <span class="bg-blue-100 text-primary text-sm font-medium px-3 py-1 rounded-full">在职</span>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="font-semibold text-gray-700 mb-2">电子邮箱</h4>
+                                <a href="mailto:hcq@mail.hzau.edu.cn" class="text-primary hover:underline">hcq@mail.hzau.edu.cn</a>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="font-semibold text-gray-700 mb-2">教育背景</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li>2008-2011年，中科院教育部水土保持与生态环境研究中心，土壤学专业，研究生/博士</li>
+                                    <li>2005-2008年，西北农林科技大学，土壤学专业，研究生/硕士</li>
+                                    <li>2001-2005年，西北农林科技大学，水土保持与荒漠化防治专业，大学本科/学士</li>
+                                </ul>
+                            </div>
+                            
+                            <button class="w-full bg-blue-50 text-primary py-2 rounded-lg hover:bg-blue-100 transition-colors mt-2" onclick="toggleDetails('huang-details')">
+                                查看详情 <i class="fa fa-chevron-down ml-1"></i>
+                            </button>
+                            
+                            <div id="huang-details" class="hidden mt-4 pt-4 border-t border-gray-100">
+                                <p class="text-gray-700">
+                                    2001-2005年，西北农林科技大学，水土保持与荒漠化防治专业，大学本科/学士；
+                                    2005-2008年，西北农林科技大学，土壤学专业，研究生/硕士；
+                                    2008-2011年，中科院教育部水土保持与生态环境研究中心，土壤学专业，研究生/博士；
+                                    2012-2018年，华中农业大学，讲师；
+                                    2019-至今，华中农业大学，副教授。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 汪明霞老师 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover opacity-0 translate-y-8 transition-all duration-700" data-aos="fade-up" data-aos-delay="200">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="https://picsum.photos/seed/wangmingxia/400/500" alt="汪明霞老师照片" class="w-full h-full object-cover">
+                        </div>
+                        <div class="md:w-2/3 p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-primary">汪明霞</h3>
+                                    <p class="text-gray-600">教授</p>
+                                </div>
+                                <span class="bg-blue-100 text-primary text-sm font-medium px-3 py-1 rounded-full">中共党员</span>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="font-semibold text-gray-700 mb-2">电子邮箱</h4>
+                                <a href="mailto:wangmx@mail.hzau.edu.cn" class="text-primary hover:underline">wangmx@mail.hzau.edu.cn</a>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="font-semibold text-gray-700 mb-2">研究方向</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li>空气污染净化研究</li>
+                                    <li>环境界面过程与模拟</li>
+                                </ul>
+                            </div>
+                            
+                            <button class="w-full bg-blue-50 text-primary py-2 rounded-lg hover:bg-blue-100 transition-colors mt-2" onclick="toggleDetails('wang-details')">
+                                查看详情 <i class="fa fa-chevron-down ml-1"></i>
+                            </button>
+                            
+                            <div id="wang-details" class="hidden mt-4 pt-4 border-t border-gray-100">
+                                <div class="mb-4">
+                                    <h4 class="font-semibold text-gray-700 mb-2">教育背景</h4>
+                                    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                        <li>2012年，华中农业大学，土壤学博士</li>
+                                        <li>2005年，华中农业大学，环境工程学硕士</li>
+                                        <li>1998年，湖南大学，环境工程学学士</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <h4 class="font-semibold text-gray-700 mb-2">工作背景</h4>
+                                    <p class="text-gray-700">1998年至今，华中农业大学资源与环境学院</p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-semibold text-gray-700 mb-2">教学情况</h4>
+                                    <p class="text-gray-700 font-medium mb-2">主讲课程：</p>
+                                    <ul class="list-disc pl-5 space-y-1 text-gray-700 mb-3">
+                                        <li>理论课程：环境工程专业《大气污染控制工程》、环境科学专业《环境工程概论》</li>
+                                        <li>实践课程：环境工程专业《大气污染控制工程课程设计》、《环境工程综合实验》、《环境监测实验》和《生产实习》</li>
+                                    </ul>
+                                    
+                                    <p class="text-gray-700 font-medium mb-2">教学研究：</p>
+                                    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                        <li>2014-2016，主持华中农业大学教学研究项目“环境类课堂翻转教学实证研究-以大气污染控制为例”</li>
+                                        <li>2011-2013，主要参加华中农业大学教学研究项目“环境工程专业实习模式的创新与实践”</li>
+                                        <li>2007-2008，指导大学生创新性实验教学项目“烟气中SO₂的净化及其产物资源化实验”</li>
+                                        <li>2006-2008，主要参加华中农业大学教学研究项目“《环境监测》精品课程建设”</li>
+                                        <li>2004-2006，主要参加湖北省教改项目“环境科学与工程‘三位一体’的实验教学体系的构建”</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 万彪老师 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover opacity-0 translate-y-8 transition-all duration-700" data-aos="fade-up" data-aos-delay="300">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="https://picsum.photos/seed/wanbiao/400/500" alt="万彪老师照片" class="w-full h-full object-cover">
+                        </div>
+                        <div class="md:w-2/3 p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-primary">万彪</h3>
+                                    <p class="text-gray-600">教授 / 博士生导师</p>
+                                </div>
+                                <span class="bg-blue-100 text-primary text-sm font-medium px-3 py-1 rounded-full">湖北荆州</span>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="font-semibold text-gray-700 mb-2">电子邮箱</h4>
+                                <a href="mailto:wanbiao52@qq.com" class="text-primary hover:underline">wanbiao52@qq.com</a>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="font-semibold text-gray-700 mb-2">研究方向</h4>
+                                <p class="text-gray-700">
+                                    地球表层环境中铁-碳-磷多要素生物地球化学耦联循环，为揭示土壤特征元素全生命周期的生态效应提供理论支撑。
+                                </p>
+                            </div>
+                            
+                            <button class="w-full bg-blue-50 text-primary py-2 rounded-lg hover:bg-blue-100 transition-colors mt-2" onclick="toggleDetails('wan-details')">
+                                查看详情 <i class="fa fa-chevron-down ml-1"></i>
+                            </button>
+                            
+                            <div id="wan-details" class="hidden mt-4 pt-4 border-t border-gray-100">
+                                <div class="mb-4">
+                                    <h4 class="font-semibold text-gray-700 mb-2">教育背景</h4>
+                                    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                        <li>2020年12月，美国佐治亚理工学院，博士</li>
+                                        <li>2013年6月和2016年6月，华中农业大学，分别获学士和硕士学位</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <h4 class="font-semibold text-gray-700 mb-2">工作经历</h4>
+                                    <p class="text-gray-700">2021至2023年，德国图宾根大学，博士后研究</p>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <h4 class="font-semibold text-gray-700 mb-2">学术成果</h4>
+                                    <p class="text-gray-700">
+                                        研究成果以第一作者或通讯作者(含共一、共通) 发表在Environ Sci Tech，Geochim Cosmochim Ac，Environ Int，Eur J Soil Sci等国际权威杂志。
+                                    </p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-semibold text-gray-700 mb-2">学术兼职</h4>
+                                    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                        <li>担任美国斯坦福同步辐射SSRL项目评审专家</li>
+                                        <li>担任Nat Commun，Environ Sci Tech，Geochim Cosmochim Ac，Fundament Res等期刊评审专家</li>
+                                        <li>担任Front Environ Eng评审编辑</li>
+                                        <li>担任Rev Environ Contam Tox，J Cent South Univ青年编委</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 研究方向 -->
+        <section id="research" class="mb-16">
+            <h2 class="section-title pb-2 mb-8">研究方向</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover opacity-0 translate-y-8 transition-all duration-700" data-aos="fade-up">
+                    <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-flask text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">土壤污染与修复</h3>
+                    <p class="text-gray-700">
+                        研究土壤污染过程与绿色修复技术，致力于解决农田土壤污染问题，保障农产品安全与生态环境健康。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover opacity-0 translate-y-8 transition-all duration-700" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-leaf text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">土壤健康与可持续农业</h3>
+                    <p class="text-gray-700">
+                        聚焦土壤障碍消减与土壤健康培育，研发退化土壤改良产品与技术，推动农业绿色发展与生态环境保护。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover opacity-0 translate-y-8 transition-all duration-700" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-cloud text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">空气污染净化与环境模拟</h3>
+                    <p class="text-gray-700">
+                        研究大气污染物的迁移转化规律与净化技术，开展环境界面过程模拟，为大气污染防控提供理论支持。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover opacity-0 translate-y-8 transition-all duration-700" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-globe text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">生物地球化学循环</h3>
+                    <p class="text-gray-700">
+                        研究地球表层环境中铁-碳-磷等多要素的生物地球化学耦联循环，揭示土壤特征元素的生态效应与环境行为。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover opacity-0 translate-y-8 transition-all duration-700" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-tint text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">水土环境界面过程</h3>
+                    <p class="text-gray-700">
+                        研究土-水-根-作物连续体中元素迁移转化的界面过程与调控原理，为土壤养分管理与污染控制提供理论依据。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover opacity-0 translate-y-8 transition-all duration-700" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-cogs text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">环境工程与技术研发</h3>
+                    <p class="text-gray-700">
+                        开发新型环境工程技术与设备，包括大气污染控制、土壤改良、废弃物处理等领域的技术创新与应用。
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 联系我们 -->
+        <section id="contact" class="mb-16">
+            <h2 class="section-title pb-2 mb-8">联系我们</h2>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-primary mb-6">联系方式</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i class="fa fa-map-marker text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">地址</h4>
+                                    <p class="text-gray-700">湖北省武汉市洪山区狮子山街1号华中农业大学资源与环境学院</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i class="fa fa-phone text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">电话</h4>
+                                    <p class="text-gray-700">027-87287508</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i class="fa fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">电子邮箱</h4>
+                                    <p class="text-gray-700">env@mail.hzau.edu.cn</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-lg mb-4">关注我们</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-primary/10 hover:bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                    <i class="fa fa-weixin"></i>
+                                </a>
+                                <a href="#" class="bg-primary/10 hover:bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                                <a href="#" class="bg-primary/10 hover:bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                                <a href="#" class="bg-primary/10 hover:bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 bg-blue-50 p-8">
+                        <h3 class="text-2xl font-bold text-primary mb-6">发送消息</h3>
+                        
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">电子邮箱</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">主题</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">消息内容</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors">
+                                发送消息 <i class="fa fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-## 博士生团队
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">华中农业大学</h3>
+                    <p class="text-gray-400">资源与环境学院</p>
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-youtube-play text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
+                        <li><a href="#faculty" class="text-gray-400 hover:text-white transition-colors">教师团队</a></li>
+                        <li><a href="#research" class="text-gray-400 hover:text-white transition-colors">研究方向</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">学院资源</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">新闻公告</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">研究成果</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">教学资源</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">招生信息</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">联系方式</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-gray-400 mt-1 mr-2"></i>
+                            <span class="text-gray-400">湖北省武汉市洪山区狮子山街1号</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-gray-400 mt-1 mr-2"></i>
+                            <span class="text-gray-400">027-87287508</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-gray-400 mt-1 mr-2"></i>
+                            <span class="text-gray-400">env@mail.hzau.edu.cn</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 华中农业大学资源与环境学院. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
 
-<div class="row">
-<div class="col-md-4">
-<div class="card mb-4">
-  <img src="images/zhangsan.jpg" class="card-img-top" alt="张三">
-  <div class="card-body">
-    <h5 class="card-title">张三</h5>
-    <h6 class="card-subtitle mb-2 text-muted">博士研究生 (2023级)</h6>
-    <p class="card-text"><strong>研究方向：</strong>基于深度学习的作物病害识别</p>
-    <a href="mailto:zhangsan@hzau.edu.cn" class="btn btn-outline-primary">联系</a>
-  </div>
-</div>
-</div>
+    <!-- JavaScript -->
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2');
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('py-2');
+                navbar.classList.remove('shadow-lg');
+            }
+        });
 
-<div class="col-md-4">
-<div class="card mb-4">
-  <img src="images/lisi.jpg" class="card-img-top" alt="李四">
-  <div class="card-body">
-    <h5 class="card-title">李四</h5>
-    <h6 class="card-subtitle mb-2 text-muted">博士研究生 (2022级)</h6>
-    <p class="card-text"><strong>研究方向：</strong>农业机器人路径规划与控制</p>
-    <a href="mailto:lisi@hzau.edu.cn" class="btn btn-outline-primary">联系</a>
-  </div>
-</div>
-</div>
-</div>
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // 关闭移动端菜单
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // 详情展开/收起
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            const button = details.previousElementSibling;
+            if (details.classList.contains('hidden')) {
+                details.classList.remove('hidden');
+                button.innerHTML = '收起详情 <i class="fa fa-chevron-up ml-1"></i>';
+            } else {
+                details.classList.add('hidden');
+                button.innerHTML = '查看详情 <i class="fa fa-chevron-down ml-1"></i>';
+            }
+        }
+
+        // 元素进入视口时的动画效果
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    entry.target.classList.add('opacity-100');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('[data-aos]').forEach(element => {
+            element.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700');
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
