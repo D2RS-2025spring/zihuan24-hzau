@@ -16,3 +16,27 @@ title: "首页"
 
 [了解课题组 →](#about)
 </div>
+
+    <div class="music-player">
+        <audio id="bgMusic" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+        <button onclick="toggleMusic()">播放/暂停背景音乐</button>
+    </div>
+
+    <footer class="academic-footer">
+        <p>© 2025 华中农业大学. 保留所有权利。</p>
+    </footer>
+    <script>
+        function toggleMusic() {
+            const music = document.getElementById('bgMusic');
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
+</body>
+</html>
+
