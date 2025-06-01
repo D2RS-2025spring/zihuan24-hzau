@@ -2,116 +2,152 @@
 title: "研究成果"
 ---
 
-```{r}
-#| echo: false
-# 自动生成论文列表
-papers <- data.frame(
-  Year = c(2025, 2025, 2025, 2025, 2023, 2023, 2023, 2023, 2023, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2021, 2021, 2021, 2021, 2021, 2021, 2021, 2021, 2021, 2021),
-  Authors = c("Xiang, Y.; Hou, J.*; Ren, L.; Xiong, J.*; Wan, B*; Wang, M.*; Tan, W. *", "Liu, J; Hou, J.*; Xiong, J; Ren, L; Wang, M. *; Tan, W. *; Hou, J. *", "Liu, J; Xiang, Y.; Chen, Y.; Zhang, H.; Ye, B.; Ren, L; Tan, W. *; Hou, J. *", "Zheng, Q; Tu, S.; Chen, Y.; Zhang, H.; William, H.; Ye, B.; Ren, L; Xiong, J. *; Tan, W. *; Hou, J. *", "Yan, Y.; Feng, X.; Wang, X.; Li, W.; Lan, S.; Zheng, L.; Zhang, Q.; Wan, B*", "Tan, W.*; Liang, Y.; Xu, Y.; Wang, M.*", "Li, Y.; Koopal, L. K.; Tan, W. *; Chai, Y.; Chen, Y.; Wu, C.; Tang, X.", "Liu, T.; Li, C.; Tan, W. *; Wang, J.; Feng, J.; Hu, Q.; Cao, C.", "Yang, Z.; Chen, X.; Hou, J.*; Liu, H.; Tan, W. *", "Wan, B *; Huang, R.; Diaz, J; Tang, Y.", "Wan, B *; Yang, P; Jung, H.; Zhu, M.; Diaz, J; Tang, Y.", "Huang, C. *, Meng, S., Tan, W. *, Wen, S., Li, D., Wang, B. *", "Xiong, J. *; Wei, Y.; Xu, J.; Hou, J. *; Liu, Z. *; Wang, M. *; Tan, W. *", "Tao, L.; Wen, X.; Li, H.; Huang, C. *; Jiang, Y.; Liu, D., Sun, B.", "Zheng, Q; Tu, S.; Hou, J. *; Ni, C.; Wang, M.; Ren, L; Wang, X.; Cao, M.; Xiong, S.; Tan, W. *", "谭诗敏,寇萌,李明,熊娟*,汪明霞*,谭文峰*", "刘冬,黄传琴*,肖可青,朱永官,谭文峰*", "崔宸阳,李静,杨子,万彪*,王小明,严玉鹏,熊娟*,谭文峰*,冯雄汉", "王晗菲,谈小克,高全龙,刘娟,倪春兰,侯静涛*", "刘娟,柳依依,熊娟*,汪明霞*,谭文峰*,侯静涛*", "苏梦贤,张磊,周小平,寇萌,熊娟*,汪明霞*,谭文峰*", "周连昊,曾全超,梅唐英泽,汪明霞*,谭文峰*", "刘星琪,薛玲玲,王梦青,龙志威,陈畅*,汪明霞*", "寇萌,樊宇,苏梦贤,熊娟*,汪明霞*,谭文峰*", "郑文琦,谭文峰*,刘昭,王凌云,郑海金", "侯静涛*,刘娟,向永金,王梦青,方凯秦,褚楚,乔敏", "熊娟*,王依涵,陈畅*,侯静涛*,许运,汪明霞*,谭文峰*", "邹士钊,陈畅*,曾全超,屈玉和,韩庆忠,谭小宇,谭文峰*,汪明霞*", "刘召慧,严玉鹏,谭文峰*,熊娟*,冯雄汉", "彭瑾,连霞,李惠平,黄传琴*"),
-  Title = c(
-    "Spontaneous abiotic reduction of arsenate to arsenite mediated by structural Fe(II) resulting from abundant oxygen-vacancy clusters in poorly-crystalline ferrihydrite in drought environments",
-    "Quantitative enhancement of arsenate immobilization induced by vacancy defects on various exposed lattice facets of hematite",
-    "Quantitative contribution of oxygen vacancy defects to arsenate immobilization on hematite",
-    "Micropore sites in ferrihydrite are responsible for its higher affinity towards As (III) relative to As (V)",
-    "Transformation of zinc oxide nanoparticles in the presence of aluminum oxide with pre-sorbed phosphorus ligands",
-    "Structural-controlled formation of nano-particle hematite and their removal performance for heavy metal ions: A review",
-    "Effect of humic acid on lysozyme interaction with montmorillonite and kaolinite",
-    "Rice-crayfish co-culture reduces ammonia volatilization and increases rice nitrogen uptake in central China",
-    "Soil texture and pH exhibit important effects on biological nitrogen fixation in paddy soil",
-    "Rethinking the biotic and abiotic remineralization of complex phosphate molecules in soils and sediments",
-    "Iron oxide-catalyzed hydrolysis of polyphosphate and the precipitation of calcium phosphate minerals",
-    "Regional differences in mineral weathering characteristics of zonal soils under intensive agriculture",
-    "Influence of reduction on the fluorescent units and proton binding of humic acids: Synchronous fluorescence spectrum and NICA-Donnan modeling",
-    "Manure fertilizer determines soil phosphorous retention and clay mineral transformation: Evidence from a 16-year long-term fertilization experimental study",
-    "Insights into the underlying mechanisms of stability working for As(III) removal by Fe-Mn binary oxide as a highly efficient adsorbent",
-    "Pb、Cd复合污染对辣椒生长及其吸收重金属的影响",
-    "土壤黏土矿物层间对有机碳的"超稳"固定机制及其增汇效应",
-    "土壤闭蓄态磷的形成、转化与利用途径",
-    "负载活性锰纤维材料的制备及其室温净化甲醛的性能研究",
-    "亚稳态赤铁矿结构特征及其对Pb(Ⅱ)固持的影响",
-    "生物炭-硅酸钙联合修复铅镉污染土壤的持续性效应",
-    "集约化柑橘种植抑制土壤磷循环微生物活性",
-    "水稻生产过程排放PM2.5、PM10颗粒物及其特征",
-    "不同土壤-小麦体系中铅镉交互作用与转运特征",
-    "氮肥减施对红壤旱坡花生地氮素径流和渗漏损失及表观平衡的影响",
-    "土壤中重金属累积预测模型研究进展",
-    "伴矿景天修复农田土壤镉污染的研究进展",
-    "秭归县生态系统服务价值时空变化研究",
-    "红壤中磷形态分布的多表面模型预测",
-    "黄土高原南缘S5-1古土壤中胶膜的特征及其环境意义"
-  ),
-  Journal = c(
-    "Environmental Science & Technology",
-    "Environmental Science & Technology",
-    "Environmental Science & Technology",
-    "Geochimica et Cosmochimica Acta",
-    "Environmental International",
-    "Chemosphere",
-    "Science of the Total Environment",
-    "Agriculture Ecosystems & Environment",
-    "Applied Soil Ecology",
-    "Science of the Total Environment",
-    "Geochimica et Cosmochimica Acta",
-    "Applied Clay Science",
-    "Colloids and Surfaces a-Physicochemical and Engineering Aspects",
-    "Applied Clay Science",
-    "Water Research",
-    "农业环境科学学报",
-    "中国科学:地球科学",
-    "植物营养与肥料学报",
-    "环境科学学报",
-    "环境科学学报",
-    "农业资源与环境学报",
-    "环境科学",
-    "环境科学与技术",
-    "环境科学",
-    "土壤学报",
-    "环境污染与防治",
-    "农业环境科学学报",
-    "环境科学与技术",
-    "磷肥与复肥",
-    "华中农业大学学报"
-  ),
-  DOI = c(
-    NA,
-    "10.1021/acs.est.5b02802",
-    "10.1021/acs.est.3c01234",
-    "10.1016/j.gca.2023.01.015",
-    "10.1016/j.envint.2023.107847",
-    "10.1016/j.chemosphere.2022.135632",
-    "10.1016/j.scitotenv.2022.156834",
-    "10.1016/j.agee.2022.107956",
-    "10.1016/j.apsoil.2022.104456",
-    "10.1016/j.scitotenv.2022.155187",
-    "10.1016/j.gca.2021.12.015",
-    "10.1016/j.clay.2021.106336",
-    "10.1016/j.colsurfa.2021.127456",
-    "10.1016/j.clay.2021.106021",
-    "10.1016/j.watres.2021.117558",
-    NA,
-    "10.1360/N072024-0001",
-    "10.11674/zwyf.2024156",
-    "10.13671/j.hjkxxb.2024.0123",
-    "10.13671/j.hjkxxb.2023.0789",
-    "10.13254/j.jare.2023.0123",
-    "10.13671/j.hjkxxb.2024.0123",
-    "10.19672/j.cnki.1003-6504.2023.05.015",
-    "10.13671/j.hjkxxb.2023.0789",
-    "10.11766/trxb202110250456",
-    "10.15985/j.cnki.1001-3865.2022.01.012",
-    "10.11654/jaes.2022-0123",
-    "10.19672/j.cnki.1003-6504.2021.s1.023",
-    "10.3969/j.issn.1007-6220.2021.02.003",
-    "10.13300/j.cnki.hnlkxb.2021.01.023"
-  )
-)
+## 发表论文
 
-cat("## 发表论文\n")
-for(i in 1:nrow(papers)){
-  cat(paste0(
-    "- **", papers$Title[i], "**  \n",
-    "  ", papers$Authors[i], "  \n",
-    "  *", papers$Journal[i], "* (", papers$Year[i], ")  \n",
-    "  [DOI:", papers$DOI[i], "](https://doi.org/", papers$DOI[i], ")\n\n"
-  ))
-}
+- **Spontaneous abiotic reduction of arsenate to arsenite mediated by structural Fe(II) resulting from abundant oxygen-vacancy clusters in poorly-crystalline ferrihydrite in drought environments**  
+  Xiang, Y.; Hou, J.*; Ren, L.; Xiong, J.*; Wan, B*; Wang, M.*; Tan, W. *  
+  *Environmental Science & Technology* (2025)  
+
+- **Quantitative enhancement of arsenate immobilization induced by vacancy defects on various exposed lattice facets of hematite**  
+  Liu, J; Hou, J.*; Xiong, J; Ren, L; Wang, M. *; Tan, W. *; Hou, J. *  
+  *Environmental Science & Technology* (2025)  
+  [DOI:10.1021/acs.est.5b02802](https://doi.org/10.1021/acs.est.5b02802)
+
+- **Quantitative contribution of oxygen vacancy defects to arsenate immobilization on hematite**  
+  Liu, J; Xiang, Y.; Chen, Y.; Zhang, H.; Ye, B.; Ren, L; Tan, W. *; Hou, J. *  
+  *Environmental Science & Technology* (2025)  
+  [DOI:10.1021/acs.est.3c01234](https://doi.org/10.1021/acs.est.3c01234)
+
+- **Micropore sites in ferrihydrite are responsible for its higher affinity towards As (III) relative to As (V)**  
+  Zheng, Q; Tu, S.; Chen, Y.; Zhang, H.; William, H.; Ye, B.; Ren, L; Xiong, J. *; Tan, W. *; Hou, J. *  
+  *Geochimica et Cosmochimica Acta* (2025)  
+  [DOI:10.1016/j.gca.2023.01.015](https://doi.org/10.1016/j.gca.2023.01.015)
+
+- **Transformation of zinc oxide nanoparticles in the presence of aluminum oxide with pre-sorbed phosphorus ligands**  
+  Yan, Y.; Feng, X.; Wang, X.; Li, W.; Lan, S.; Zheng, L.; Zhang, Q.; Wan, B*  
+  *Environmental International* (2023)  
+  [DOI:10.1016/j.envint.2023.107847](https://doi.org/10.1016/j.envint.2023.107847)
+
+- **Structural-controlled formation of nano-particle hematite and their removal performance for heavy metal ions: A review**  
+  Tan, W.*; Liang, Y.; Xu, Y.; Wang, M.*  
+  *Chemosphere* (2023)  
+  [DOI:10.1016/j.chemosphere.2022.135632](https://doi.org/10.1016/j.chemosphere.2022.135632)
+
+- **Effect of humic acid on lysozyme interaction with montmorillonite and kaolinite**  
+  Li, Y.; Koopal, L. K.; Tan, W. *; Chai, Y.; Chen, Y.; Wu, C.; Tang, X.  
+  *Science of the Total Environment* (2023)  
+  [DOI:10.1016/j.scitotenv.2022.156834](https://doi.org/10.1016/j.scitotenv.2022.156834)
+
+- **Rice-crayfish co-culture reduces ammonia volatilization and increases rice nitrogen uptake in central China**  
+  Liu, T.; Li, C.; Tan, W. *; Wang, J.; Feng, J.; Hu, Q.; Cao, C.  
+  *Agriculture Ecosystems & Environment* (2023)  
+  [DOI:10.1016/j.agee.2022.107956](https://doi.org/10.1016/j.agee.2022.107956)
+
+- **Soil texture and pH exhibit important effects on biological nitrogen fixation in paddy soil**  
+  Yang, Z.; Chen, X.; Hou, J.*; Liu, H.; Tan, W. *  
+  *Applied Soil Ecology* (2023)  
+  [DOI:10.1016/j.apsoil.2022.104456](https://doi.org/10.1016/j.apsoil.2022.104456)
+
+- **Rethinking the biotic and abiotic remineralization of complex phosphate molecules in soils and sediments**  
+  Wan, B *; Huang, R.; Diaz, J; Tang, Y.  
+  *Science of the Total Environment* (2022)  
+  [DOI:10.1016/j.scitotenv.2022.155187](https://doi.org/10.1016/j.scitotenv.2022.155187)
+
+- **Iron oxide-catalyzed hydrolysis of polyphosphate and the precipitation of calcium phosphate minerals**  
+  Wan, B *; Yang, P; Jung, H.; Zhu, M.; Diaz, J; Tang, Y.  
+  *Geochimica et Cosmochimica Acta* (2022)  
+  [DOI:10.1016/j.gca.2021.12.015](https://doi.org/10.1016/j.gca.2021.12.015)
+
+- **Regional differences in mineral weathering characteristics of zonal soils under intensive agriculture**  
+  Huang, C. *, Meng, S., Tan, W. *, Wen, S., Li, D., Wang, B. *  
+  *Applied Clay Science* (2022)  
+  [DOI:10.1016/j.clay.2021.106336](https://doi.org/10.1016/j.clay.2021.106336)
+
+- **Influence of reduction on the fluorescent units and proton binding of humic acids: Synchronous fluorescence spectrum and NICA-Donnan modeling**  
+  Xiong, J. *; Wei, Y.; Xu, J.; Hou, J. *; Liu, Z. *; Wang, M. *; Tan, W. *  
+  *Colloids and Surfaces a-Physicochemical and Engineering Aspects* (2022)  
+  [DOI:10.1016/j.colsurfa.2021.127456](https://doi.org/10.1016/j.colsurfa.2021.127456)
+
+- **Manure fertilizer determines soil phosphorous retention and clay mineral transformation: Evidence from a 16-year long-term fertilization experimental study**  
+  Tao, L.; Wen, X.; Li, H.; Huang, C. *; Jiang, Y.; Liu, D., Sun, B.  
+  *Applied Clay Science* (2022)  
+  [DOI:10.1016/j.clay.2021.106021](https://doi.org/10.1016/j.clay.2021.106021)
+
+- **Insights into the underlying mechanisms of stability working for As(III) removal by Fe-Mn binary oxide as a highly efficient adsorbent**  
+  Zheng, Q; Tu, S.; Hou, J. *; Ni, C.; Wang, M.; Ren, L; Wang, X.; Cao, M.; Xiong, S.; Tan, W. *  
+  *Water Research* (2022)  
+  [DOI:10.1016/j.watres.2021.117558](https://doi.org/10.1016/j.watres.2021.117558)
+
+- **Pb、Cd复合污染对辣椒生长及其吸收重金属的影响**  
+  谭诗敏,寇萌,李明,熊娟*,汪明霞*,谭文峰*  
+  *农业环境科学学报* (2022)  
+
+- **土壤黏土矿物层间对有机碳的"超稳"固定机制及其增汇效应**  
+  刘冬,黄传琴*,肖可青,朱永官,谭文峰*  
+  *中国科学:地球科学* (2022)  
+  [DOI:10.1360/N072024-0001](https://doi.org/10.1360/N072024-0001)
+
+- **土壤闭蓄态磷的形成、转化与利用途径**  
+  崔宸阳,李静,杨子,万彪*,王小明,严玉鹏,熊娟*,谭文峰*,冯雄汉  
+  *植物营养与肥料学报* (2022)  
+  [DOI:10.11674/zwyf.2024156](https://doi.org/10.11674/zwyf.2024156)
+
+- **负载活性锰纤维材料的制备及其室温净化甲醛的性能研究**  
+  王晗菲,谈小克,高全龙,刘娟,倪春兰,侯静涛*  
+  *环境科学学报* (2022)  
+  [DOI:10.13671/j.hjkxxb.2024.0123](https://doi.org/10.13671/j.hjkxxb.2024.0123)
+
+- **亚稳态赤铁矿结构特征及其对Pb(Ⅱ)固持的影响**  
+  刘娟,柳依依,熊娟*,汪明霞*,谭文峰*,侯静涛*  
+  *环境科学学报* (2022)  
+  [DOI:10.13671/j.hjkxxb.2023.0789](https://doi.org/10.13671/j.hjkxxb.2023.0789)
+
+- **生物炭-硅酸钙联合修复铅镉污染土壤的持续性效应**  
+  苏梦贤,张磊,周小平,寇萌,熊娟*,汪明霞*,谭文峰*  
+  *农业资源与环境学报* (2022)  
+  [DOI:10.13254/j.jare.2023.0123](https://doi.org/10.13254/j.jare.2023.0123)
+
+- **集约化柑橘种植抑制土壤磷循环微生物活性**  
+  周连昊,曾全超,梅唐英泽,汪明霞*,谭文峰*  
+  *环境科学* (2022)  
+  [DOI:10.13671/j.hjkxxb.2024.0123](https://doi.org/10.13671/j.hjkxxb.2024.0123)
+
+- **水稻生产过程排放PM2.5、PM10颗粒物及其特征**  
+  刘星琪,薛玲玲,王梦青,龙志威,陈畅*,汪明霞*  
+  *环境科学与技术* (2022)  
+  [DOI:10.19672/j.cnki.1003-6504.2023.05.015](https://doi.org/10.19672/j.cnki.1003-6504.2023.05.015)
+
+- **不同土壤-小麦体系中铅镉交互作用与转运特征**  
+  寇萌,樊宇,苏梦贤,熊娟*,汪明霞*,谭文峰*  
+  *环境科学* (2022)  
+  [DOI:10.13671/j.hjkxxb.2023.0789](https://doi.org/10.13671/j.hjkxxb.2023.0789)
+
+- **氮肥减施对红壤旱坡花生地氮素径流和渗漏损失及表观平衡的影响**  
+  郑文琦,谭文峰*,刘昭,王凌云,郑海金  
+  *土壤学报* (2021)  
+  [DOI:10.11766/trxb202110250456](https://doi.org/10.11766/trxb202110250456)
+
+- **土壤中重金属累积预测模型研究进展**  
+  侯静涛*,刘娟,向永金,王梦青,方凯秦,褚楚,乔敏  
+  *环境污染与防治* (2021)  
+  [DOI:10.15985/j.cnki.1001-3865.2022.01.012](https://doi.org/10.15985/j.cnki.1001-3865.2022.01.012)
+
+- **伴矿景天修复农田土壤镉污染的研究进展**  
+  熊娟*,王依涵,陈畅*,侯静涛*,许运,汪明霞*,谭文峰*  
+  *农业环境科学学报* (2021)  
+  [DOI:10.11654/jaes.2022-0123](https://doi.org/10.11654/jaes.2022-0123)
+
+- **秭归县生态系统服务价值时空变化研究**  
+  邹士钊,陈畅*,曾全超,屈玉和,韩庆忠,谭小宇,谭文峰*,汪明霞*  
+  *环境科学与技术* (2021)  
+  [DOI:10.19672/j.cnki.1003-6504.2021.s1.023](https://doi.org/10.19672/j.cnki.1003-6504.2021.s1.023)
+
+- **红壤中磷形态分布的多表面模型预测**  
+  刘召慧,严玉鹏,谭文峰*,熊娟*,冯雄汉  
+  *磷肥与复肥* (2021)  
+  [DOI:10.3969/j.issn.1007-6220.2021.02.003](https://doi.org/10.3969/j.issn.1007-6220.2021.02.003)
+
+- **黄土高原南缘S5-1古土壤中胶膜的特征及其环境意义**  
+  彭瑾,连霞,李惠平,黄传琴*  
+  *华中农业大学学报* (2021)  
+  [DOI:10.13300/j.cnki.hnlkxb.2021.01.023](https://doi.org/10.13300/j.cnki.hnlkxb.2021.01.023)

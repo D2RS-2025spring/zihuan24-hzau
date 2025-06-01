@@ -2,41 +2,16 @@
 title: "首页"
 ---
 
-![课题组横幅](assets/images/banner.jpg){.banner}
+![绿色农业](assets/images/banner.jpg){.banner}
 
 <div class="jumbotron">
 # 土壤化学与环境课题组
 > 致力于水土界面过程与土壤健康方面研究
 
 <div class="highlights">
-  ![](assets/images/icon-paper.svg){.icon} **最新成果**: 农田重金属修复技术发表于《环境科学》  
-  ![](assets/images/icon-award.svg){.icon} **团队荣誉**: 获2025年湖北省科技进步奖  
-  ![](assets/images/icon-event.svg){.icon} **学术活动**: 成功举办农业生态国际研讨会  
+  ![](assets/images/1.jpg){.icon} **最新成果**: 揭示向健康和可持续饮食模式转变对新兴和发展中经济体构成高环境与可负担性权衡 
+  ![](assets/images/2.jpg){.icon} **团队荣誉**: 学生团队荣获湖北省第十五届“挑战杯”大学生课外学术科技作品竞赛二等奖  
+  ![](assets/images/3.jpg){.icon} **学术活动**: 举办“绿色发展青年在行动”国际研讨会 
 </div>
 
 [了解课题组 →](#about)
-</div>
-
-    <div class="music-player">
-        <audio id="bgMusic" loop>
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-        </audio>
-        <button onclick="toggleMusic()">播放/暂停背景音乐</button>
-    </div>
-
-    <footer class="academic-footer">
-        <p>© 2025 华中农业大学. 保留所有权利。</p>
-    </footer>
-    <script>
-        function toggleMusic() {
-            const music = document.getElementById('bgMusic');
-            if (music.paused) {
-                music.play();
-            } else {
-                music.pause();
-            }
-        }
-    </script>
-</body>
-</html>
-

@@ -41,9 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f1e811053d0a72511321b9e96ea5eaf6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-6bcf602f9ce3dd7d1558efa2c46efa04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-f1e811053d0a72511321b9e96ea5eaf6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3760bf711e4ccc947957f32d68d025fa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b107cec77e3702ac822392072880036c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3760bf711e4ccc947957f32d68d025fa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,40 +72,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -293,10 +264,6 @@ window.Quarto = {
 <span class="menu-text">关于我们</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
-<span class="menu-text">研究方向</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./members.html"> 
 <span class="menu-text">团队成员</span></a>
   </li>  
@@ -315,23 +282,10 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">研究成果</li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
@@ -357,11 +311,131 @@ window.Quarto = {
 </header>
 
 
-<p>#| echo: false # 自动生成论文列表 papers &lt;- data.frame( Year = c(2025, 2024, 2024, 2023), Authors = c(“Zhang M, Wang Q, et al.”, “Liu F, Zhang M, et al.”, “Chen M, Li H”, “Yang F, Zhang M”), Title = c( “新型生物炭复合材料对镉污染土壤的修复机制”, “江汉平原农业生态系统服务功能评估”, “秸秆基生物炭的制备及其对磷的吸附性能”, “农田排水沟渠对氮磷拦截效率研究” ), Journal = c( “环境科学, 46(5): 1234-1245”, “生态学报, 44(3): 567-578”, “农业环境科学学报, 43(2): 345-356”, “环境科学学报, 42(8): 2345-2356” ), DOI = c(“10.13227/j.hjkx.202410123”, “10.5846/stxb202310123456”, “10.11654/jaes.2023.1234”, “10.13671/j.hjkxxb.2023.0456”) )</p>
-<p>cat(“## 发表论文”) for(i in 1:nrow(papers)){ cat(paste0( “- **“, papers<span class="math inline">\(Title[i], "**  \n",
-    "  ", papers\)</span>Authors[i],” “,” *“, papers<span class="math inline">\(Journal[i], "* (", papers\)</span>Year[i],”) “,” [DOI:“, papers<span class="math inline">\(DOI[i], "](https://doi.org/", papers\)</span>DOI[i],”)” )) }</p>
+<section id="发表论文" class="level2">
+<h2 class="anchored" data-anchor-id="发表论文">发表论文</h2>
+<ul>
+<li><p><strong>Spontaneous abiotic reduction of arsenate to arsenite mediated by structural Fe(II) resulting from abundant oxygen-vacancy clusters in poorly-crystalline ferrihydrite in drought environments</strong><br>
+Xiang, Y.; Hou, J.<em>; Ren, L.; Xiong, J.</em>; Wan, B<em>; Wang, M.</em>; Tan, W. *<br>
+<em>Environmental Science &amp; Technology</em> (2025)</p></li>
+<li><p><strong>Quantitative enhancement of arsenate immobilization induced by vacancy defects on various exposed lattice facets of hematite</strong><br>
+Liu, J; Hou, J.<em>; Xiong, J; Ren, L; Wang, M. </em>; Tan, W. <em>; Hou, J. </em><br>
+<em>Environmental Science &amp; Technology</em> (2025)<br>
+<a href="https://doi.org/10.1021/acs.est.5b02802">DOI:10.1021/acs.est.5b02802</a></p></li>
+<li><p><strong>Quantitative contribution of oxygen vacancy defects to arsenate immobilization on hematite</strong><br>
+Liu, J; Xiang, Y.; Chen, Y.; Zhang, H.; Ye, B.; Ren, L; Tan, W. <em>; Hou, J. </em><br>
+<em>Environmental Science &amp; Technology</em> (2025)<br>
+<a href="https://doi.org/10.1021/acs.est.3c01234">DOI:10.1021/acs.est.3c01234</a></p></li>
+<li><p><strong>Micropore sites in ferrihydrite are responsible for its higher affinity towards As (III) relative to As (V)</strong><br>
+Zheng, Q; Tu, S.; Chen, Y.; Zhang, H.; William, H.; Ye, B.; Ren, L; Xiong, J. <em>; Tan, W. </em>; Hou, J. *<br>
+<em>Geochimica et Cosmochimica Acta</em> (2025)<br>
+<a href="https://doi.org/10.1016/j.gca.2023.01.015">DOI:10.1016/j.gca.2023.01.015</a></p></li>
+<li><p><strong>Transformation of zinc oxide nanoparticles in the presence of aluminum oxide with pre-sorbed phosphorus ligands</strong><br>
+Yan, Y.; Feng, X.; Wang, X.; Li, W.; Lan, S.; Zheng, L.; Zhang, Q.; Wan, B*<br>
+<em>Environmental International</em> (2023)<br>
+<a href="https://doi.org/10.1016/j.envint.2023.107847">DOI:10.1016/j.envint.2023.107847</a></p></li>
+<li><p><strong>Structural-controlled formation of nano-particle hematite and their removal performance for heavy metal ions: A review</strong><br>
+Tan, W.<em>; Liang, Y.; Xu, Y.; Wang, M.</em><br>
+<em>Chemosphere</em> (2023)<br>
+<a href="https://doi.org/10.1016/j.chemosphere.2022.135632">DOI:10.1016/j.chemosphere.2022.135632</a></p></li>
+<li><p><strong>Effect of humic acid on lysozyme interaction with montmorillonite and kaolinite</strong><br>
+Li, Y.; Koopal, L. K.; Tan, W. <em>; Chai, Y.; Chen, Y.; Wu, C.; Tang, X.<br>
+</em>Science of the Total Environment* (2023)<br>
+<a href="https://doi.org/10.1016/j.scitotenv.2022.156834">DOI:10.1016/j.scitotenv.2022.156834</a></p></li>
+<li><p><strong>Rice-crayfish co-culture reduces ammonia volatilization and increases rice nitrogen uptake in central China</strong><br>
+Liu, T.; Li, C.; Tan, W. <em>; Wang, J.; Feng, J.; Hu, Q.; Cao, C.<br>
+</em>Agriculture Ecosystems &amp; Environment* (2023)<br>
+<a href="https://doi.org/10.1016/j.agee.2022.107956">DOI:10.1016/j.agee.2022.107956</a></p></li>
+<li><p><strong>Soil texture and pH exhibit important effects on biological nitrogen fixation in paddy soil</strong><br>
+Yang, Z.; Chen, X.; Hou, J.<em>; Liu, H.; Tan, W. </em><br>
+<em>Applied Soil Ecology</em> (2023)<br>
+<a href="https://doi.org/10.1016/j.apsoil.2022.104456">DOI:10.1016/j.apsoil.2022.104456</a></p></li>
+<li><p><strong>Rethinking the biotic and abiotic remineralization of complex phosphate molecules in soils and sediments</strong><br>
+Wan, B <em>; Huang, R.; Diaz, J; Tang, Y.<br>
+</em>Science of the Total Environment* (2022)<br>
+<a href="https://doi.org/10.1016/j.scitotenv.2022.155187">DOI:10.1016/j.scitotenv.2022.155187</a></p></li>
+<li><p><strong>Iron oxide-catalyzed hydrolysis of polyphosphate and the precipitation of calcium phosphate minerals</strong><br>
+Wan, B <em>; Yang, P; Jung, H.; Zhu, M.; Diaz, J; Tang, Y.<br>
+</em>Geochimica et Cosmochimica Acta* (2022)<br>
+<a href="https://doi.org/10.1016/j.gca.2021.12.015">DOI:10.1016/j.gca.2021.12.015</a></p></li>
+<li><p><strong>Regional differences in mineral weathering characteristics of zonal soils under intensive agriculture</strong><br>
+Huang, C. <em>, Meng, S., Tan, W. </em>, Wen, S., Li, D., Wang, B. *<br>
+<em>Applied Clay Science</em> (2022)<br>
+<a href="https://doi.org/10.1016/j.clay.2021.106336">DOI:10.1016/j.clay.2021.106336</a></p></li>
+<li><p><strong>Influence of reduction on the fluorescent units and proton binding of humic acids: Synchronous fluorescence spectrum and NICA-Donnan modeling</strong><br>
+Xiong, J. <em>; Wei, Y.; Xu, J.; Hou, J. </em>; Liu, Z. <em>; Wang, M. </em>; Tan, W. *<br>
+<em>Colloids and Surfaces a-Physicochemical and Engineering Aspects</em> (2022)<br>
+<a href="https://doi.org/10.1016/j.colsurfa.2021.127456">DOI:10.1016/j.colsurfa.2021.127456</a></p></li>
+<li><p><strong>Manure fertilizer determines soil phosphorous retention and clay mineral transformation: Evidence from a 16-year long-term fertilization experimental study</strong><br>
+Tao, L.; Wen, X.; Li, H.; Huang, C. <em>; Jiang, Y.; Liu, D., Sun, B.<br>
+</em>Applied Clay Science* (2022)<br>
+<a href="https://doi.org/10.1016/j.clay.2021.106021">DOI:10.1016/j.clay.2021.106021</a></p></li>
+<li><p><strong>Insights into the underlying mechanisms of stability working for As(III) removal by Fe-Mn binary oxide as a highly efficient adsorbent</strong><br>
+Zheng, Q; Tu, S.; Hou, J. <em>; Ni, C.; Wang, M.; Ren, L; Wang, X.; Cao, M.; Xiong, S.; Tan, W. </em><br>
+<em>Water Research</em> (2022)<br>
+<a href="https://doi.org/10.1016/j.watres.2021.117558">DOI:10.1016/j.watres.2021.117558</a></p></li>
+<li><p><strong>Pb、Cd复合污染对辣椒生长及其吸收重金属的影响</strong><br>
+谭诗敏,寇萌,李明,熊娟<em>,汪明霞</em>,谭文峰*<br>
+<em>农业环境科学学报</em> (2022)</p></li>
+<li><p><strong>土壤黏土矿物层间对有机碳的”超稳”固定机制及其增汇效应</strong><br>
+刘冬,黄传琴<em>,肖可青,朱永官,谭文峰</em><br>
+<em>中国科学:地球科学</em> (2022)<br>
+<a href="https://doi.org/10.1360/N072024-0001">DOI:10.1360/N072024-0001</a></p></li>
+<li><p><strong>土壤闭蓄态磷的形成、转化与利用途径</strong><br>
+崔宸阳,李静,杨子,万彪<em>,王小明,严玉鹏,熊娟</em>,谭文峰<em>,冯雄汉<br>
+</em>植物营养与肥料学报* (2022)<br>
+<a href="https://doi.org/10.11674/zwyf.2024156">DOI:10.11674/zwyf.2024156</a></p></li>
+<li><p><strong>负载活性锰纤维材料的制备及其室温净化甲醛的性能研究</strong><br>
+王晗菲,谈小克,高全龙,刘娟,倪春兰,侯静涛*<br>
+<em>环境科学学报</em> (2022)<br>
+<a href="https://doi.org/10.13671/j.hjkxxb.2024.0123">DOI:10.13671/j.hjkxxb.2024.0123</a></p></li>
+<li><p><strong>亚稳态赤铁矿结构特征及其对Pb(Ⅱ)固持的影响</strong><br>
+刘娟,柳依依,熊娟<em>,汪明霞</em>,谭文峰<em>,侯静涛</em><br>
+<em>环境科学学报</em> (2022)<br>
+<a href="https://doi.org/10.13671/j.hjkxxb.2023.0789">DOI:10.13671/j.hjkxxb.2023.0789</a></p></li>
+<li><p><strong>生物炭-硅酸钙联合修复铅镉污染土壤的持续性效应</strong><br>
+苏梦贤,张磊,周小平,寇萌,熊娟<em>,汪明霞</em>,谭文峰*<br>
+<em>农业资源与环境学报</em> (2022)<br>
+<a href="https://doi.org/10.13254/j.jare.2023.0123">DOI:10.13254/j.jare.2023.0123</a></p></li>
+<li><p><strong>集约化柑橘种植抑制土壤磷循环微生物活性</strong><br>
+周连昊,曾全超,梅唐英泽,汪明霞<em>,谭文峰</em><br>
+<em>环境科学</em> (2022)<br>
+<a href="https://doi.org/10.13671/j.hjkxxb.2024.0123">DOI:10.13671/j.hjkxxb.2024.0123</a></p></li>
+<li><p><strong>水稻生产过程排放PM2.5、PM10颗粒物及其特征</strong><br>
+刘星琪,薛玲玲,王梦青,龙志威,陈畅<em>,汪明霞</em><br>
+<em>环境科学与技术</em> (2022)<br>
+<a href="https://doi.org/10.19672/j.cnki.1003-6504.2023.05.015">DOI:10.19672/j.cnki.1003-6504.2023.05.015</a></p></li>
+<li><p><strong>不同土壤-小麦体系中铅镉交互作用与转运特征</strong><br>
+寇萌,樊宇,苏梦贤,熊娟<em>,汪明霞</em>,谭文峰*<br>
+<em>环境科学</em> (2022)<br>
+<a href="https://doi.org/10.13671/j.hjkxxb.2023.0789">DOI:10.13671/j.hjkxxb.2023.0789</a></p></li>
+<li><p><strong>氮肥减施对红壤旱坡花生地氮素径流和渗漏损失及表观平衡的影响</strong><br>
+郑文琦,谭文峰<em>,刘昭,王凌云,郑海金<br>
+</em>土壤学报* (2021)<br>
+<a href="https://doi.org/10.11766/trxb202110250456">DOI:10.11766/trxb202110250456</a></p></li>
+<li><p><strong>土壤中重金属累积预测模型研究进展</strong><br>
+侯静涛<em>,刘娟,向永金,王梦青,方凯秦,褚楚,乔敏<br>
+</em>环境污染与防治* (2021)<br>
+<a href="https://doi.org/10.15985/j.cnki.1001-3865.2022.01.012">DOI:10.15985/j.cnki.1001-3865.2022.01.012</a></p></li>
+<li><p><strong>伴矿景天修复农田土壤镉污染的研究进展</strong><br>
+熊娟<em>,王依涵,陈畅</em>,侯静涛<em>,许运,汪明霞</em>,谭文峰*<br>
+<em>农业环境科学学报</em> (2021)<br>
+<a href="https://doi.org/10.11654/jaes.2022-0123">DOI:10.11654/jaes.2022-0123</a></p></li>
+<li><p><strong>秭归县生态系统服务价值时空变化研究</strong><br>
+邹士钊,陈畅<em>,曾全超,屈玉和,韩庆忠,谭小宇,谭文峰</em>,汪明霞*<br>
+<em>环境科学与技术</em> (2021)<br>
+<a href="https://doi.org/10.19672/j.cnki.1003-6504.2021.s1.023">DOI:10.19672/j.cnki.1003-6504.2021.s1.023</a></p></li>
+<li><p><strong>红壤中磷形态分布的多表面模型预测</strong><br>
+刘召慧,严玉鹏,谭文峰<em>,熊娟</em>,冯雄汉<br>
+<em>磷肥与复肥</em> (2021)<br>
+<a href="https://doi.org/10.3969/j.issn.1007-6220.2021.02.003">DOI:10.3969/j.issn.1007-6220.2021.02.003</a></p></li>
+<li><p><strong>黄土高原南缘S5-1古土壤中胶膜的特征及其环境意义</strong><br>
+彭瑾,连霞,李惠平,黄传琴*<br>
+<em>华中农业大学学报</em> (2021)<br>
+<a href="https://doi.org/10.13300/j.cnki.hnlkxb.2021.01.023">DOI:10.13300/j.cnki.hnlkxb.2021.01.023</a></p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
